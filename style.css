@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @font-face {
     font-family: "gilroy light";
     src: url('Fonts/Gilroy-Light.otf');
@@ -61,9 +54,9 @@ body {
   
 /* NAVBAR */
 .nav {
- 
     height: 15vh;
     width: 100%;
+    position:relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -94,19 +87,122 @@ body {
             justify-content: space-between;
     gap: 2vw;
 }
-
 .nav-links a {
     color: black;
     text-decoration: none;
     font-size: 1.5vw;
 }
-
 .menu {
     display: none;
 }
-.nav .mobile-nav-links{
-display:none
-}
+#hamburger-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hamburger-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    -webkit-transition: all 0.3 ease-in-out;
+    -o-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color:rgb(156, 150, 150);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-height: 0;
+    z-index:9;
+    overflow: hidden;
+    
+    -webkit-transition: all 0.3 ease-in-out;
+    
+    -o-transition: all 0.3 ease-in-out;
+    
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    -webkit-transition: all 0.3 ease-in-out;
+    -o-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links li {
+    list-style: none;
+  }
+  
+  .menu-links.open {
+    max-height: 300px;
+  }
+  
+  .hamburger-icon.open span:first-child {
+    -webkit-transform: rotate(45deg) translate(10px, 5px);
+        -ms-transform: rotate(45deg) translate(10px, 5px);
+            transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open span:last-child {
+    -webkit-transform: rotate(-45deg) translate(10px, -5px);
+        -ms-transform: rotate(-45deg) translate(10px, -5px);
+            transform: rotate(-45deg) translate(10px, -5px);
+  }
+  
+  .hamburger-icon span:first-child {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  
+  .hamburger-icon span:first-child {
+    opacity: 1;
+  }
+  
+  .hamburger-icon span:first-child {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+
+
+
 /* PROFILE */
 .profile {
     position:relative;
@@ -777,8 +873,8 @@ display:none
 
 @media only screen and (max-width: 480px) {
     /* NAVBAR */
-.nav {
-    background-color:red;
+#hamburger-nav {
+    display: flex;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -791,44 +887,22 @@ display:none
             justify-content: space-between;
     padding: 2vw 7vw;
 }
-
+.nav{
+    display:none
+}
 .logo {
     font-size: 5vw;
     font-weight: 800;
     color: black;
 }
-
 .nav .nav-links {
+    display: none;
+} 
+#hamburger-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: 2vw;
-}
-
-.nav-links a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.5vw;
-}
-.nav .nav-links {
-    display: none;
-}
-.nav .mobile-nav-links{
-    position: absolute;
-    height:20vw;
-    width:20vw;
-    right:0;
-    top:0;
-    background-color:white;
-} 
-
-
+  }
 /* PROFILE */
 
 .profile {
@@ -963,20 +1037,11 @@ display:none
     height: 2.5rem;
 }
 .profile .arrows{
-    position:absolute;
-    right:0;
-    bottom:0;
-    -webkit-transform:translate(-50%,-50%);
-        -ms-transform:translate(-50%,-50%);
-            transform:translate(-50%,-50%)
-}
-.profile .arrows .arrow{
-    height:5vw;
+ display:none;
 }
 
 /* ABOUT */
 .about {
-
     position:relative;
     padding: 5vw 7vw;
     display: -webkit-box;
@@ -1009,6 +1074,10 @@ display:none
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1026,8 +1095,7 @@ display:none
     display: flex;
    -ms-flex-negative: 0;
        flex-shrink: 0;
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 50px;
 }
 
 .section__pic img {
@@ -1041,18 +1109,19 @@ display:none
 
 .text-container {
     width: 100%;
-    padding: 2vw;
 }
 
 .text-container p {
-    font-size: 2.5vw;
+    text-align:center;
+    font-size: 3.2vw;
     font-weight: 900;
-    line-height: 3vw;
+    line-height: 4vw;
 
 }
 
 .text-container p span {
-    font-size: 5vw;
+    font-size: 7vw;
+
     font-weight: bolder;
     color: black;
     font-style: italic;
@@ -1140,16 +1209,9 @@ display:none
     font-weight: 600;
 }
 .about .arrows{
-    position:absolute;
-    top:65%;
-    right:-2%;
-    -webkit-transform:translate(-50%,-50%);
-        -ms-transform:translate(-50%,-50%);
-            transform:translate(-50%,-50%)
-}
-.about .arrows .arrow{
-    height:5vw;
-}
+    display:none;
+   }
+
 
 /* SKILLS */
 
@@ -1261,17 +1323,8 @@ display:none
     font-weight:500;
 }
 .skills .arrows{
-    position:absolute;
-    top:50%;
-    right:0;
-    -webkit-transform:translate(-50%,-50%);
-        -ms-transform:translate(-50%,-50%);
-            transform:translate(-50%,-50%)
-}
-.skills .arrows .arrow{
-    height:5vw;
-}
-
+    display:none;
+   }
 /* PROJECTS */
 
 .projects {
@@ -1386,16 +1439,8 @@ display:none
     color: black;
 }
 .projects .arrows{
-    position:absolute;
-    top:52%;
-    right:0;
-    -webkit-transform:translate(-50%,-50%);
-        -ms-transform:translate(-50%,-50%);
-            transform:translate(-50%,-50%)
-}
-.projects .arrows .arrow{
-    height:5vw;
-}
+    display:none;
+   }
 
 /* FOOTER */
 .footer {

@@ -19,35 +19,24 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-
-        <div class="mobile-nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="menu">
-            <i class="ri-menu-line"></i>
-            <i class="ri-close-large-line"></i>
+    </div>
+    <div id="hamburger-nav">
+        <div class="logo">Akhil Maratha</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
         </div>
     </div>
-
-    <!-- <div class="mobile-nav">
-        <div class="mobile-logo">Akhil Maratha</div>
-
-        <div class="mobile-nav-links">
-            <div class="navbar-links">
-              <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>   
-            </div>
-           
-        </div>
-        
-    </div> -->
-
-
+    
     <div class="profile">
         <div class="profile-image">
             <img src="./assets/profileimg.jpeg" alt="Akhil Maratha profile picture" />
@@ -301,7 +290,7 @@
         </div>
 
     </div>
-    
+
     <div class="footer" id="footer">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
@@ -332,6 +321,7 @@
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
