@@ -9,7 +9,7 @@ function Footer() {
           <div className=" flex flex-col items-center justify-center">
             <div className="flex space-x-5">
               <a
-                href="https://www.linkedin.com/in/akhil-maratha-504761296/"
+                href="https://www.linkedin.com/in/akhilmaratha/"
                 target="_blank"
               >
               <FaLinkedinIn size={30} /> 

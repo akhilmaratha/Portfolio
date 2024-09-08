@@ -2,7 +2,6 @@ import React from "react";
 import pic from "/profileimg.jpeg";
 
 import { FaLinkedin } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
@@ -47,7 +46,7 @@ function Home() {
                 <h1 className="font-bold text-center text-lg">Available on</h1>
                 <ul className="flex space-x-5">
                   <li>
-                    <a href="https://www.linkedin.com/in/akhil-maratha-504761296/" target="_blank">
+                    <a href="https://www.linkedin.com/in/akhilmaratha/" target="_blank">
                       <FaLinkedin className="text-3xl cursor-pointer" />
                     </a>
                   </li>
@@ -70,7 +69,7 @@ function Home() {
               </div>
             </div>
             <div className="text-center py-5">
-              <a href="./resume-example.pdf" target="_blank">
+              <a href="./Akhil Resume.pdf" target="_blank">
                 <button className="px-4 py-2 bg-blue-500 border-1 rounded-full text-white ">
                   Download Resume
                 </button>

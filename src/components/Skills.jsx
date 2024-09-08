@@ -6,6 +6,7 @@ import javascript from "/javascript.png";
 import express from "/express.png";
 import mongoDB from "/mongodb.jpg";
 import nodejs from "/node.png";
+import github from "/github.png";
 function Skills() {
   const cardItem = [
     {
@@ -43,6 +44,11 @@ function Skills() {
       id: 7,
       logo: mongoDB,
       name: "MongoDB",
+    },
+    {
+      id: 8,
+      logo: github,
+      name: "GitHub",
     },
   ];
   return (
